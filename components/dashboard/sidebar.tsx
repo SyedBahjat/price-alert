@@ -1,9 +1,10 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { LayoutDashboard, Settings, History, LogOut, TrendingUp } from 'lucide-react';
+import { LayoutDashboard, Settings, History, LogOut } from 'lucide-react';
 
 const navItems = [
   { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
@@ -25,9 +26,7 @@ export function Sidebar() {
       {/* Logo */}
       <div className="p-6 pb-4">
         <Link href="/dashboard" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-xl bg-primary/15 flex items-center justify-center group-hover:bg-primary/25 transition-colors glow-primary">
-            <TrendingUp className="w-4.5 h-4.5 text-primary" />
-          </div>
+          <Image src="/logo.png" alt="PriceAlert" width={36} height={36} className="rounded-xl" />
           <div>
             <span className="text-base font-bold tracking-tight">PriceAlert</span>
             <div className="flex items-center gap-1">

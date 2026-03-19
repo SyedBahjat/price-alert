@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import Image from 'next/image';
 import {
   TrendingUp, Bell, Zap, Shield, ArrowRight, Send, MessageSquare,
   Mail, BarChart3, Clock, Wifi, ArrowUpRight, ArrowDownRight,
@@ -107,9 +108,7 @@ export default function LandingPage() {
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.04] bg-[#060611]/80 backdrop-blur-2xl">
         <div className="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-8 h-8 rounded-lg bg-[#00d4aa]/15 flex items-center justify-center group-hover:bg-[#00d4aa]/25 transition-colors">
-              <TrendingUp className="w-4 h-4 text-[#00d4aa]" />
-            </div>
+            <Image src="/logo.png" alt="PriceAlert" width={32} height={32} className="rounded-lg" />
             <span className="text-base font-bold tracking-tight">PriceAlert</span>
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm text-white/50">
@@ -496,9 +495,7 @@ export default function LandingPage() {
       <footer className="border-t border-white/[0.04] py-10 px-5">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 rounded-lg bg-[#00d4aa]/15 flex items-center justify-center">
-              <TrendingUp className="w-3.5 h-3.5 text-[#00d4aa]" />
-            </div>
+            <Image src="/logo.png" alt="PriceAlert" width={28} height={28} className="rounded-lg" />
             <span className="text-sm font-bold">PriceAlert</span>
           </div>
           <p className="text-xs text-white/20">Built with Next.js, Supabase & Resend. Deployed on Vercel.</p>

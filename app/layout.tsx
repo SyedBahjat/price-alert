@@ -14,7 +14,18 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: 'PriceAlert — Real-Time Price Alerts',
-  description: 'Set price targets for crypto and stocks. Get notified via Telegram and Discord when they hit.',
+  description: 'Set price targets for crypto and stocks. Get notified via Email, Telegram and Discord when they hit.',
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/logo.png',
+  },
+  openGraph: {
+    title: 'PriceAlert — Real-Time Price Alerts',
+    description: 'Set price targets for crypto and stocks. Get notified via Email, Telegram and Discord when they hit.',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({

@@ -4,9 +4,9 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { TrendingUp } from 'lucide-react';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -49,9 +49,7 @@ export default function LoginPage() {
         className="w-full max-w-sm"
       >
         <div className="text-center mb-8">
-          <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mx-auto mb-4">
-            <TrendingUp className="w-6 h-6 text-primary" />
-          </div>
+          <Image src="/logo.png" alt="PriceAlert" width={48} height={48} className="rounded-xl mx-auto mb-4" />
           <h1 className="text-2xl font-bold">Welcome back</h1>
           <p className="text-sm text-muted-foreground mt-1">Sign in to your account</p>
         </div>
