@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: pricealert-worker
+    runtime: node
+    rootDir: worker
+    buildCommand: npm install
+    startCommand: node index.js
+    plan: free
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false

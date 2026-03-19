@@ -1,0 +1,14 @@
+{
+  "name": "pricealert-worker",
+  "version": "1.0.0",
+  "description": "Background worker for PriceAlert — monitors prices 24/7",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.99.2",
+    "resend": "^4.0.0",
+    "ws": "^8.18.0"
+  }
+}
