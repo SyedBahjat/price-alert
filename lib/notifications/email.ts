@@ -17,7 +17,7 @@ export async function sendAlertEmail(
     const arrow = direction === 'above' ? '↑' : '↓';
 
     const { error } = await getResend().emails.send({
-      from: 'PriceAlert <onboarding@resend.dev>',
+      from: 'PriceAlert <alerts@studyingabroadnow.info>',
       to,
       subject: `${emoji} ${symbol} hit your ${direction} target of $${targetPrice.toLocaleString()}`,
       html: `
@@ -60,7 +60,7 @@ export async function sendAlertEmail(
 export async function sendWelcomeEmail(to: string, name: string): Promise<boolean> {
   try {
     const { error } = await getResend().emails.send({
-      from: 'PriceAlert <onboarding@resend.dev>',
+      from: 'PriceAlert <alerts@studyingabroadnow.info>',
       to,
       subject: 'Welcome to PriceAlert 🚀',
       html: `
@@ -98,7 +98,7 @@ export async function sendWelcomeEmail(to: string, name: string): Promise<boolea
 export async function sendTestEmail(to: string): Promise<boolean> {
   try {
     const { error } = await getResend().emails.send({
-      from: 'PriceAlert <onboarding@resend.dev>',
+      from: 'PriceAlert <alerts@studyingabroadnow.info>',
       to,
       subject: '🔔 Test Alert — PriceAlert',
       html: `

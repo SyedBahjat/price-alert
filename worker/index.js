@@ -85,7 +85,7 @@ async function sendEmail(to, symbol, direction, targetPrice, currentPrice, note)
     const emoji = direction === 'above' ? '🟢' : '🔴';
     const arrow = direction === 'above' ? '↑' : '↓';
     await resend.emails.send({
-      from: 'PriceAlert <onboarding@resend.dev>',
+      from: 'PriceAlert <alerts@studyingabroadnow.info>',
       to,
       subject: `${emoji} ${symbol} hit your ${direction} target of $${targetPrice.toLocaleString()}`,
       html: `
